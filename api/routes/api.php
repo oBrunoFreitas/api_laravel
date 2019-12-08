@@ -18,7 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('funcionario/list', 'api\FuncionariosController@index');
-Route::get('funcionario/show', 'api\FuncionariosController@show');
+Route::get('funcionario/show/id/{id}', 'api\FuncionariosController@show');
 Route::post('funcionario/create', 'api\FuncionariosController@store');
-Route::delete('funcionario/destroy', 'api\FuncionariosController@delete');
-Route::put('funcionario/destroy', 'api\FuncionariosController@update');
+Route::delete('funcionario/destroy/{id}', 'api\FuncionariosController@delete');
+Route::put('funcionario/update/{id}', 'api\FuncionariosController@update');
