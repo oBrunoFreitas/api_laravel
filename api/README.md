@@ -1,4 +1,4 @@
-# Cars API
+# Funcionarios API
 
 Project to improve skills about API consumption using the framework Laravel.
 
@@ -71,4 +71,4 @@ public/api/funcionario/destroy/1
 ```
 (POST) funcionarios/update – update a specific record by id
 ```shell
-    public/api/funcionario/update/1name=bruno
+public/api/funcionario/update/1name=bruno
