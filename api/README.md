@@ -35,6 +35,17 @@ Create the database in your MySQL database manager environment:
 CREATE DATABASE test_api;
 ```
 
+Config the .enf file with you db information 
+
+```shell
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=test_api
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
 ## Starting server
 Start displaying the application from the server:
 
