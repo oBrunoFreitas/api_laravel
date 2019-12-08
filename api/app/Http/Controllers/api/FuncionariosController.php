@@ -10,7 +10,8 @@ class FuncionariosController extends Controller
 {
     public function index()
     {
-        return Funcionario::all();
+        $data = Funcionario::all();
+        return response()->json($data, 200);
     }
 
     public function store(Request $request)
@@ -21,18 +22,21 @@ class FuncionariosController extends Controller
 
     public function show($id)
     {
-        return Funcionario::findOrFail($id);
+        $data = Funcionario::findOrFail($id);
+        return response()->json($data, 200);
     }
 
     public function update(Request $request, $id)
     {
         $funcionario = Funcionario::findOrFail($id);
-        $funcionario->update($request->all());        
+        $funcionario->update($request->all());  
+        return response()->json($funcionario, 200);      
     }
 
     public function delete($id)
     {
         $funcionario = Funcionario::findOrFail($id);
         $funcionario->delete();
+        return response()->json($funcionario, 200);
     }
 }
