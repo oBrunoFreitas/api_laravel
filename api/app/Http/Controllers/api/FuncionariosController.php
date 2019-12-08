@@ -30,7 +30,7 @@ class FuncionariosController extends Controller
     {
         $funcionario = Funcionario::findOrFail($id);
         $funcionario->update($request->all());  
-        return response()->json($funcionario, 200);      
+        return response()->json($funcionario, 202);      
     }
 
     public function delete($id)
