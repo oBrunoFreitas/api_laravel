@@ -11,9 +11,8 @@ class FuncionariosController extends Controller
     public function index()
     {
         return Funcionario::all();
-
     }
-    
+
     public function store(Request $request)
     {
         $data = Funcionario::create($request->all());
@@ -28,7 +27,7 @@ class FuncionariosController extends Controller
     public function update(Request $request, $id)
     {
         $funcionario = Funcionario::findOrFail($id);
-        $funcionario->update($request-all());
+        $funcionario->update($request->all());        
     }
 
     public function delete($id)
